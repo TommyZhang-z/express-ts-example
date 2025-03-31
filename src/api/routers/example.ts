@@ -11,7 +11,7 @@ router.get("/hello", (req: Request, res: Response) => {
   res.json({ message: "Hello from the example route!" });
 });
 
-router.get("/protected", auth, (req: Request, res: Response) => {
+router.get("/protected", auth(), (req: Request, res: Response) => {
   res.json({ message: "Hello from the protected route!" });
 });
 
